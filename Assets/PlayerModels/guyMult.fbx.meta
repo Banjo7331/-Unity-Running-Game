@@ -33,11 +33,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature|Waving (1)
-      takeName: Armature|Waving
+      name: Armature|Running (1)
+      takeName: Armature|Running
       internalID: -8440490636892978807
       firstFrame: 0
-      lastFrame: 37
+      lastFrame: 73
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -62,8 +62,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|Running
-      takeName: Armature|Running
+      name: Armature|Wav (1)
+      takeName: Armature|Wav
       internalID: -3828583913261678786
       firstFrame: 0
       lastFrame: 73
@@ -91,11 +91,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|Wav
-      takeName: Armature|Wav
+      name: Armature|Waving (1)
+      takeName: Armature|Waving
       internalID: -3339277419578333334
       firstFrame: 0
-      lastFrame: 73
+      lastFrame: 37
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -120,11 +120,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|Waving
-      takeName: Armature|Waving
+      name: Armature|Running
+      takeName: Armature|Running
       internalID: 4829966686875344911
       firstFrame: 0
-      lastFrame: 37
+      lastFrame: 73
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

@@ -90,7 +90,7 @@ public class Player : MonoBehaviour
         if(collision.gameObject.tag == "Danger")
         {
             Destroy(gameObject);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
+            SceneManager.LoadScene(3);
         }
         if(collision.gameObject.tag != "InvisibleWal")
             isGrounded = true;
@@ -119,7 +119,7 @@ public class Player : MonoBehaviour
         }
         if(jumped == true)
         {
-            rigidBodyComponent.AddForce(Vector3.up * 8, ForceMode.VelocityChange);
+            rigidBodyComponent.AddForce(Vector3.up * 7, ForceMode.VelocityChange);
             jumped = false;
         }
     }
