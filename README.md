@@ -1,2 +1,2 @@
-# -Unity-Running-Game
-Learning c# by game development
+# Figure - Rush
+Learning c#  and unity framework by game development,
