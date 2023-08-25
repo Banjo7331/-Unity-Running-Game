@@ -54,7 +54,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-For any inquiries or suggestions, feel free to reach out to us at your@email.com.
+For any inquiries or suggestions, feel free to reach out to us at cylwikbartosz@gmail.com.
 
 ---
 
