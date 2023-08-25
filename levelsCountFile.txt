@@ -1,5 +1,0 @@
-{
-    "Score": 60.0,
-    "Upgrader": 40,
-    "levelsCompleted": 2
-}

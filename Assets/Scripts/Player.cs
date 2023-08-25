@@ -1,3 +1,4 @@
+using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AdaptivePerformance.VisualScripting;
@@ -10,6 +11,13 @@ public class Player : MonoBehaviour
     [SerializeField] float speed;
     public Rigidbody rigidBodyComponent;
     public BoxCollider boxColiderToBeShrinked;
+    private float speedHor = 10;
+
+
+    private const string Shoppt = "Shoop.txt";
+    private bool modell1;
+    private bool modell2;
+    private int whichOne;
 
     Vector3 target;
 
@@ -19,11 +27,36 @@ public class Player : MonoBehaviour
 
     private float horizontalInput;
     private float verticalInput;
-    
+    private class Shop
+    {
+        public int Coins;
+        public bool[] model1;
+        public bool[] model2;
+    }
 
     private Animator animator;
     private void Start()
     {
+        if (File.Exists(Shoppt))
+        {
+            var jsonString = File.ReadAllText(Shoppt);
+            var shoop = JsonUtility.FromJson<Shop>(jsonString);
+            if (shoop != null)
+            {
+
+                modell1 = shoop.model1[0];
+                modell2 = shoop.model2[0];
+
+            }
+            if (modell1)
+            {
+                whichOne = 1;
+            }
+            else
+            {
+                whichOne = 2;
+            }
+        }
         animator = GetComponent<Animator>();
         target = transform.position;
     }
@@ -43,14 +76,7 @@ public class Player : MonoBehaviour
             //rigidBodyComponent.AddForce(Vector3.right * 5);
             target += new Vector3(3, 0, 0);
         }
-        /*if (Input.GetKeyDown(KeyCode.S))
-        {
-            animator.SetBool("IsCrowling", true);
-        }
-        else
-        {
-            animator.SetBool("IsCrowling", false);
-        }*/
+        
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -66,7 +92,14 @@ public class Player : MonoBehaviour
             Vector3 newSize = boxColiderToBeShrinked.size;
             newSize.z = 0.02f;
             boxColiderToBeShrinked.size = newSize;
+            if(whichOne == 2)
+            {
+                Vector3 newSize3 = boxColiderToBeShrinked.size;
+                newSize3.y = 5.79032f;
+                boxColiderToBeShrinked.size = newSize3;
+            }
             animator.SetBool("IsCrowling", true);
+            speedHor = 4;
 
         }
         else
@@ -77,13 +110,17 @@ public class Player : MonoBehaviour
             Vector3 newSize = boxColiderToBeShrinked.size;
             newSize.z = 0.04f;
             boxColiderToBeShrinked.size = newSize;
+            if (whichOne == 2)
+            {
+                Vector3 newSize3 = boxColiderToBeShrinked.size;
+                newSize3.y = 10.79032f;
+                boxColiderToBeShrinked.size = newSize3;
+            }
             animator.SetBool("IsCrowling", false);
+            speedHor = 10;
+           
 
         }
-
-        //if(target.y <0.5)
-        //transform.position = Vector3.Lerp(transform.position, target, speed * Time.deltaTime);
-
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -112,7 +149,7 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
 
-        rigidBodyComponent.velocity = new Vector3(horizontalInput * 10, rigidBodyComponent.velocity.y, 0);
+        rigidBodyComponent.velocity = new Vector3(horizontalInput * speedHor, rigidBodyComponent.velocity.y, 0);
         if (!isGrounded)
         {
             return;
@@ -123,4 +160,17 @@ public class Player : MonoBehaviour
             jumped = false;
         }
     }
+    public void SetText(ScoreCounter scoreC, TextMeshProUGUI scoreT)
+    {
+        scoreCounter = scoreC;
+        scoreText = scoreT;
+    }
+    
+
+    public void DestroyPlayer()
+    {
+        Destroy(gameObject);
+    }
+    
+
 }

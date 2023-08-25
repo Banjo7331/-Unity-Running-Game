@@ -13,14 +13,16 @@ public class ShopButtons : MonoBehaviour
     private const string Shoppt = "Shoop.txt";
     private bool modell1;
     private bool modell2;
+    private bool modell1Avaibility;
+    private bool modell2Avaibility;
     private int coins;
     // Start is called before the first frame update
 
     private class Shop
     {
         public int Coins;
-        public bool model1;
-        public bool model2;
+        public bool[] model1;
+        public bool[] model2;
     }
 
     public void Choose()
@@ -43,20 +45,26 @@ public class ShopButtons : MonoBehaviour
             if (shoop != null)
             {
                 coins = shoop.Coins;
-                modell1 = shoop.model1;
-                modell2 = shoop.model2;
+                modell1 = shoop.model1[0];
+                modell2 = shoop.model2[0];
+                modell1Avaibility = shoop.model1[1];
+                modell2Avaibility = shoop.model2[1];
             }
-
-            var saveResults = new Shop
+            
+            if (modell1Avaibility)
             {
-                Coins = coins,
-                model1 = true,
-                model2 = false
-            };
+                var saveResults = new Shop
+                {
+                    Coins = coins,
+                    model1 = new bool[] { true, modell1Avaibility },//true,
+                    model2 = new bool[] { false, modell2Avaibility },
+                };
 
-            var shopToSave = JsonUtility.ToJson(saveResults, true);
+                var shopToSave = JsonUtility.ToJson(saveResults, true);
 
-            File.WriteAllText(Shoppt, shopToSave);
+                File.WriteAllText(Shoppt, shopToSave);
+            }
+            
         }
 
         
@@ -70,20 +78,26 @@ public class ShopButtons : MonoBehaviour
             if (shoop != null)
             {
                 coins = shoop.Coins;
-                modell1 = shoop.model1;
-                modell2 = shoop.model2;
+                modell1 = shoop.model1[0];
+                modell2 = shoop.model2[0];
+                modell1Avaibility = shoop.model1[1];
+                modell2Avaibility = shoop.model2[1];
             }
-
-            var saveResults = new Shop
+            
+            if(modell2Avaibility)
             {
-                Coins = coins,
-                model1 = false,
-                model2 = true
-            };
+                var saveResults = new Shop
+                {
+                    Coins = coins,
+                    model1 = new bool[] { false, modell1Avaibility },//true,
+                    model2 = new bool[] { true, modell2Avaibility },
+                };
 
-            var shopToSave = JsonUtility.ToJson(saveResults, true);
+                var shopToSave = JsonUtility.ToJson(saveResults, true);
 
-            File.WriteAllText(Shoppt, shopToSave);
+                File.WriteAllText(Shoppt, shopToSave);
+            }
+            
         }
 
         

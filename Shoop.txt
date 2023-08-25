@@ -1,0 +1,11 @@
+{
+    "Coins": 0,
+    "model1": [
+        false,
+        true
+    ],
+    "model2": [
+        false,
+        false
+    ]
+}
