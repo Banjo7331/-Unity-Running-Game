@@ -1,10 +1,9 @@
 # Figure Rush
 
-![Gameplay Screenshot](screenshots/gameplay.png)
+![Menu Screenshot](ImgToReadme/Menu.png)
 
 **Figure Rush** is an exciting avoiding objects game developed in Unity, where players must navigate through a challenging environment, avoid obstacles, and collect power-ups to achieve high scores. Customize your gameplay experience with unlockable skins from the in-game shop.
 
-![Shop Screenshot](screenshots/shop.png)
 
 ## Features
 
@@ -14,9 +13,9 @@
 
 ## Screenshots
 
-| Gameplay | Shop | Skins |
+| Menu | Gameplay1 | Gameplay2 |
 |---|---|---|
-| ![Gameplay](screenshots/gameplay.png) | ![Shop](screenshots/shop.png) | ![Skins](screenshots/skins.png) |
+| ![Menu](ImgToReadme/Menu.png) | ![Gameplay1](ImgToReadme/GamePlay1.png) | ![Gameplay2](ImgToReadme/GamePlay2.png) |
 
 ## Getting Started
 
