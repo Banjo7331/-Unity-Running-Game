@@ -2,17 +2,15 @@
 
 ![Gameplay Screenshot](screenshots/gameplay.png)
 
-Figure Rush is an exciting avoiding objects game that challenges your reflexes and coordination. Dodge obstacles, collect power-ups, and unlock stylish skins in this fast-paced adventure.
+**Figure Rush** is an exciting avoiding objects game developed in Unity, where players must navigate through a challenging environment, avoid obstacles, and collect power-ups to achieve high scores. Customize your gameplay experience with unlockable skins from the in-game shop.
 
 ![Shop Screenshot](screenshots/shop.png)
 
 ## Features
 
-- Intuitive and addictive gameplay.
-- Avoid various obstacles to achieve high scores.
-- Collect power-ups for temporary advantages.
-- Explore the in-game shop to customize your game.
-- Unlock new skins using in-game currency.
+- **Engaging Gameplay:** Dodge obstacles and test your reflexes.
+- **Shop:** Visit the shop to unlock new skins using in-game currency.
+- **Intuitive Controls:** Easy-to-use controls for a smooth gaming experience.
 
 ## Screenshots
 
@@ -24,22 +22,21 @@ Figure Rush is an exciting avoiding objects game that challenges your reflexes a
 
 ### Prerequisites
 
-- Make sure you have [Python](https://www.python.org/) installed.
-- Install [pygame](https://www.pygame.org/) library using `pip install pygame`.
+- **Unity:** Make sure you have Unity installed. Download it from [here](https://unity.com/).
 
 ### Installation
 
 1. Clone this repository: `git clone https://github.com/your-username/Figure-Rush.git`
-2. Navigate to the project folder: `cd Figure-Rush`
-3. Run the game: `python main.py`
+2. Open the project in Unity.
+3. Navigate to the `Scenes` folder and open the `Starting-Scene.unity` scene.
+4. Press the Play button in Unity to run the game.
 
-## Usage
+## How to Play
 
-- Use the arrow keys to control your character's movement.
+- Use the arrow keys or ASD and Space to control your character's movement.
 - Avoid colliding with obstacles to stay in the game.
-- Collect power-ups to gain temporary advantages.
 - Earn in-game currency by achieving high scores.
-- Visit the shop to unlock new skins and customize your character.
+- Visit the shop in the main menu to unlock new skins.
 
 ## Contributing
 
@@ -47,7 +44,7 @@ Contributions are welcome! If you'd like to contribute to Figure Rush, please fo
 
 1. Fork the repository.
 2. Create a new branch for your feature: `git checkout -b feature-name`
-3. Make your changes and test them thoroughly.
+3. Make your changes in Unity and test them thoroughly.
 4. Commit your changes: `git commit -m "Add feature"`
 5. Push to the branch: `git push origin feature-name`
 6. Create a pull request detailing your changes.
@@ -62,6 +59,6 @@ For any inquiries or suggestions, feel free to reach out to us at your@email.com
 
 ---
 
-*Game developed by [Your Name](https://github.com/your-username)*
+*Game developed by Bartosz Cylwik (https://github.com/Banjo7331)*
 
 [Optional: Badges, acknowledgments, additional sections as needed]
